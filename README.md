@@ -10,6 +10,17 @@ sichtbar mit.
 
 Kostenlos, ohne Werbung, ohne Konto, ohne Server.
 
+## Mit KI entwickelt
+
+Diese App wurde mit Hilfe von KI entwickelt. Der Quelltext ist zum weit überwiegenden Teil von
+Claude (Anthropic) geschrieben worden, im Dialog mit mir. Von mir stammen die Anforderungen, die
+Entscheidungen über Aufbau und Funktionsumfang sowie sämtliche Tests auf echter Hardware.
+
+Das steht hier, weil es fair ist, das offenzulegen, und weil es für die Einschätzung des Projekts
+zählt: Der Code ist geprüft und die App läuft im täglichen Gebrauch, aber sie ist kein Ergebnis
+jahrelanger Handarbeit. Wer sie in einem kritischen Umfeld einsetzen will, sollte den Quelltext
+selbst ansehen.
+
 ## Installieren
 
 Die fertige APK liegt unter [Releases](../../releases/latest). Herunterladen, antippen und die
