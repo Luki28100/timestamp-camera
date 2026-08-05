@@ -12,9 +12,7 @@ Kostenlos, ohne Werbung, ohne Konto, ohne Server.
 
 ## Entstehung
 
-Diese App wurde mit Hilfe von KI entwickelt. Der Quelltext stammt zum überwiegenden Teil von Claude
-(Anthropic). Anforderungen, Entscheidungen über Aufbau und Funktionsumfang sowie die Tests auf echter
-Hardware kommen vom Autor.
+Diese App wurde mit Hilfe von Claude (Anthropic) entwickelt. Anforderungen, Entscheidungen über Aufbau und Funktionsumfang sowie die Tests auf echter Hardware kommen vom Autor.
 
 ## Installieren
 
