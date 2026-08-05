@@ -75,17 +75,6 @@ npm run cap:sync
 cd android && gradlew.bat assembleRelease
 ```
 
-Zwei Dateien fehlen nach dem Klonen absichtlich, weil sie nicht ins Repository gehören:
-
-- `android/local.properties` mit `sdk.dir=` und dem Pfad zum lokalen Android SDK.
-- `keystore/timestamp-camera.jks` und `android/keystore.properties` mit einem Signaturschlüssel. Ohne
-  sie entsteht ein unsignierter Release-Build. Wer selbst signieren will, legt einen eigenen
-  Schlüssel mit `keytool` an und trägt Pfad, Alias und Passwörter in `keystore.properties` ein.
-
-Das Build-Verzeichnis liegt bewusst außerhalb des Projektordners, weil synchronisierte Ordner
-(OneDrive und Ähnliche) Dateien in Cloud-Platzhalter verwandeln, an denen Gradle scheitert. Über die
-Umgebungsvariable `TIMESTAMP_CAMERA_BUILD_DIR` lässt sich der Ort ändern.
-
 ## Als Web-App statt als APK
 
 Das Projekt ist im Kern eine PWA und läuft auch im Browser. `getUserMedia` verlangt dabei einen

@@ -17,11 +17,9 @@ buildscript {
 
 apply from: "variables.gradle"
 
-// This project lives inside OneDrive. OneDrive's Files On-Demand turns idle files
-// into cloud placeholders (reparse points), and Gradle then dies on its own
-// intermediates with "Cannot snapshot ...: not a regular file". Keeping build
-// output outside the synced tree avoids that for good — and stops a few hundred
-// megabytes of throwaway files from being uploaded on every build.
+// Build output goes outside the project directory. Cloud-synced folders can turn
+// idle files into placeholders, which Gradle cannot read back as regular files.
+// Override the location with TIMESTAMP_CAMERA_BUILD_DIR.
 def buildRoot = System.getenv("TIMESTAMP_CAMERA_BUILD_DIR")
     ?: (System.getenv("LOCALAPPDATA") ? "${System.getenv('LOCALAPPDATA')}/TimestampCamera-build" : null)
 
