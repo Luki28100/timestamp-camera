@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zeitstempel-Kamera</title>
+    <meta
+      name="description"
+      content="Android-Kamera, die Datum, Uhrzeit, Standort und eigenen Text fest ins Foto und Video einbrennt. Kostenlos, ohne Werbung, ohne Konto."
+    />
+    <style>
+      :root { color-scheme: dark light; }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0 auto; padding: 2.5rem 1.25rem 5rem; max-width: 46rem;
+        background: #0b0f14; color: #e2e8f0; line-height: 1.65;
+        font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+      a { color: #ffd400; }
+      h1 { font-size: 2rem; margin: 0 0 .25rem; }
+      h2 { font-size: 1.15rem; margin-top: 2.5rem; color: #ffd400; }
+      .lead { color: #94a3b8; margin-top: 0; font-size: 1.05rem; }
+      .cta {
+        display: inline-block; margin: 1.75rem 0 .5rem; padding: .85rem 1.5rem;
+        background: #ffd400; color: #0b0f14; font-weight: 700; border-radius: .6rem;
+        text-decoration: none;
+      }
+      .note { color: #94a3b8; font-size: .9rem; }
+      ol, ul { padding-left: 1.25rem; }
+      li { margin: .4rem 0; }
+      .box { border: 1px solid #334155; border-radius: .6rem; padding: 1rem 1.15rem; margin: 1.5rem 0; }
+      code { background: rgba(148,163,184,.2); padding: .1rem .35rem; border-radius: .25rem; }
+      footer { margin-top: 3.5rem; border-top: 1px solid #334155; padding-top: 1rem; color: #94a3b8; font-size: .9rem; }
+      @media (prefers-color-scheme: light) {
+        body { background: #f8fafc; color: #0f172a; }
+        .lead, .note, footer { color: #475569; }
+        a, h2 { color: #a16207; }
+        .cta { background: #0f172a; color: #f8fafc; }
+        .box { border-color: #cbd5e1; }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Zeitstempel-Kamera</h1>
+    <p class="lead">
+      Eine Android-Kamera, die Datum, Uhrzeit, Standort und einen frei wählbaren Text
+      <strong>fest ins Bild einbrennt</strong> — nicht als Metadaten, sondern sichtbar. Für Fotos und
+      Videos. Bei Videos läuft die Uhr im Bild mit.
+    </p>
+
+    <a class="cta" href="https://github.com/Luki28100/timestamp-camera/releases/latest">
+      APK herunterladen
+    </a>
+    <p class="note">Kostenlos, ohne Werbung, ohne Konto. Kein Play Store nötig.</p>
+
+    <h2>Installieren</h2>
+    <ol>
+      <li>APK herunterladen und antippen.</li>
+      <li>
+        Android meldet, dass aus dieser Quelle keine Apps installiert werden dürfen: auf
+        <strong>Einstellungen</strong> tippen, <strong>Aus dieser Quelle zulassen</strong>
+        einschalten, zurück.
+      </li>
+      <li>
+        Erscheint eine Play-Protect-Meldung, auf <strong>Trotzdem installieren</strong> tippen. Diese
+        Warnung kommt bei jeder App außerhalb des Play Stores und sagt nichts über die App aus.
+      </li>
+      <li><strong>Installieren</strong> tippen.</li>
+    </ol>
+
+    <h2>Was die App kann</h2>
+    <ul>
+      <li>Zeitstempel in elf Formaten, dazu ein eigenes Muster — auch taktische Zeit und NATO-DTG</li>
+      <li>Neun Positionen, Größe, Farbe, Kontur, Schatten und Hintergrundbox frei einstellbar</li>
+      <li>Zwei eigene Textzeilen, etwa Projekt und Auftragsnummer</li>
+      <li>Standort als Koordinaten oder in Grad, Minuten, Sekunden — optional mit Adresse</li>
+      <li>Video mit mitlaufender Uhr, Selbstauslöser, Gitternetz, Frontkamera spiegeln</li>
+      <li>Aufnahmen landen im Galerie-Album <code>Zeitstempel-Kamera</code></li>
+    </ul>
+
+    <h2>Datenschutz</h2>
+    <p>
+      Die App sammelt nichts. Kein Server, kein Konto, keine Werbung, keine Statistik. Alles bleibt
+      auf dem Gerät. Einzige Ausnahme ist die optionale Adressauflösung, die Koordinaten an
+      OpenStreetMap schickt — standardmäßig aus und mit ausdrücklicher Nachfrage.
+      <a href="./datenschutz.html">Zur vollständigen Datenschutzerklärung</a>
+    </p>
+
+    <div class="box">
+      <strong>Ein Hinweis zur Beweiskraft:</strong> Der Zeitstempel stammt aus der Uhr des Handys. Wer
+      die Gerätezeit verstellt, bekommt einen falschen Stempel ins Bild. Für Dokumentation im Alltag
+      reicht das, als gerichtsfester Nachweis taugt es nicht.
+    </div>
+
+    <h2>Updates</h2>
+    <p>
+      Es gibt keine Store-Anbindung. Neue Versionen erscheinen als
+      <a href="https://github.com/Luki28100/timestamp-camera/releases">Release auf GitHub</a> und
+      werden einfach über die alte Version installiert; Aufnahmen und Einstellungen bleiben erhalten.
+      Wer Updates automatisch angeboten bekommen möchte, kann
+      <a href="https://github.com/ImranR98/Obtainium">Obtainium</a> nutzen und dort die Adresse dieses
+      Repositorys eintragen.
+    </p>
+
+    <footer>
+      Quelltext auf <a href="https://github.com/Luki28100/timestamp-camera">GitHub</a> · MIT-Lizenz
+      · <a href="./datenschutz.html">Datenschutz</a>
+    </footer>
+  </body>
+</html>

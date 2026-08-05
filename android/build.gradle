@@ -1,0 +1,40 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.1'
+        classpath 'com.google.gms:google-services:4.4.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+apply from: "variables.gradle"
+
+// This project lives inside OneDrive. OneDrive's Files On-Demand turns idle files
+// into cloud placeholders (reparse points), and Gradle then dies on its own
+// intermediates with "Cannot snapshot ...: not a regular file". Keeping build
+// output outside the synced tree avoids that for good — and stops a few hundred
+// megabytes of throwaway files from being uploaded on every build.
+def buildRoot = System.getenv("TIMESTAMP_CAMERA_BUILD_DIR")
+    ?: (System.getenv("LOCALAPPDATA") ? "${System.getenv('LOCALAPPDATA')}/TimestampCamera-build" : null)
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    if (buildRoot) {
+        layout.buildDirectory = new File("${buildRoot}/${project.name}")
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.layout.buildDirectory
+}

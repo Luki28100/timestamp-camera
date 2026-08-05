@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+
+# android/ is checked in on purpose — AndroidManifest.xml carries the camera,
+# microphone and location permissions. Build output is ignored by android/.gitignore.
+
+# Signing material must never be committed.
+keystore/
+android/keystore.properties
+android/local.properties
+
+# Built APKs belong in a GitHub release, not in the repository.
+*.apk

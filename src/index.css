@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-ink text-slate-100 antialiased;
+    overscroll-behavior: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* range sliders stay legible on the dark panel */
+  input[type="range"] {
+    @apply h-1 w-full cursor-pointer appearance-none rounded-full bg-slate-700;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    @apply h-4 w-4 appearance-none rounded-full bg-stamp;
+  }
+  input[type="range"]::-moz-range-thumb {
+    @apply h-4 w-4 rounded-full border-0 bg-stamp;
+  }
+
+  input[type="color"] {
+    @apply h-9 w-12 cursor-pointer rounded border border-slate-600 bg-transparent p-0.5;
+  }
+}
+
+@layer components {
+  .field-label {
+    @apply mb-1 block text-xs font-medium uppercase tracking-wide text-slate-400;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-slate-600 bg-slate-800 px-3 py-2 text-sm text-slate-100
+           outline-none focus:border-stamp;
+  }
+
+  .chip {
+    @apply rounded-full border border-slate-600 px-3 py-1.5 text-xs font-medium text-slate-300
+           transition-colors;
+  }
+
+  .chip-active {
+    @apply border-stamp bg-stamp/15 text-stamp;
+  }
+
+  .icon-btn {
+    @apply flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-slate-100
+           backdrop-blur transition-colors active:bg-white/25;
+  }
+}
